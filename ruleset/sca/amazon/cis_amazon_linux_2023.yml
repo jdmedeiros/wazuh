@@ -1404,7 +1404,7 @@ checks:
       - mitre_mitigations: ["M1022"]
     condition: all
     rules:
-      - 'f:/etc/chrony.conf -> r:^server\.+$|^pool\.+$'
+      - 'f:/etc/(chrony\.conf|chrony\.d/.*) -> r:^(server|pool)\b'
       - 'f:/etc/sysconfig/chronyd -> r:^OPTIONS\s*=\s* && r:-u chrony'
 
   # 2.2.1 Ensure xorg-x11-server-common is not installed. (Automated)
