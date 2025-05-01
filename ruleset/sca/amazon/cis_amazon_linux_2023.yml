@@ -3472,7 +3472,7 @@ checks:
       - mitre_tactics: ["TA0005"]
     condition: all
     rules:
-      - 'c:sshd -T -> r:^\s*\t*LogLevel\s+INFO|^\s*\t*LogLevel\s+VERBOSE'
+      - 'c:sshd -T -> r:^\s*\t*loglevel\s+INFO|^\s*\t*loglevel\s+VERBOSE'
       - 'not f:/etc/ssh/sshd_config -> r:^\s*\t*LogLevel\s+INFO|^\s*\t*LogLevel\s+VERBOSE'
       - 'not f:/etc/ssh/sshd_config -> r:^\s*\t*LogLevel\s+ && !r:INFO|VERBOSE'
 
